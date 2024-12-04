@@ -22,7 +22,7 @@ Visit `http://localhost:8080/graphql` and use the GraphQL Playground to test que
 
 ## Example queries:
 
-### Fetching All Categories
+### Fetching All Categories: Returns all categories with their names and items.
 query {
   getCategories {
     name
@@ -32,25 +32,22 @@ query {
     }
   }
 }
-### Expected Result: Returns all categories with their names and items.
 
-### Fetching Menu Items for a Specific Category
+### Fetching Menu Items for a Specific Category: Returns menu items for the specified category (e.g., "Appetizers").
 query {
   getMenuItems(categoryName: "Appetizers") {
     name
     price
   }
 }
-### Expected Result: Returns menu items for the specified category (e.g., "Appetizers").
 
-### Invalid Category Handling
+### Invalid Category Handling: Returns an empty array.
 query {
   getMenuItems(categoryName: "NonExistentCategory") {
     name
     price
   }
 }
-### Expected Result: Returns an empty array.
 
 
 
