@@ -1,0 +1,15 @@
+type MenuItem {
+  name: String!
+  description: String!
+  price: Float!
+}
+
+type Category {
+  name: String!
+  items: [MenuItem!]!
+}
+
+type Query {
+  getCategories: [Category!]!
+  getMenuItems(categoryName: String!): [MenuItem!]!
+}
