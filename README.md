@@ -20,9 +20,9 @@ Run e2e tests: `npm run test:e2e`
 ### Usage
 Visit `http://localhost:8080/graphql` and use the GraphQL Playground to test queries.
 
-### Example queries:
+## Example queries:
 
-# Fetching All Categories
+### Fetching All Categories
 query {
   getCategories {
     name
@@ -32,25 +32,25 @@ query {
     }
   }
 }
-# Expected Result: Returns all categories with their names and items.
+### Expected Result: Returns all categories with their names and items.
 
-# Fetching Menu Items for a Specific Category
+### Fetching Menu Items for a Specific Category
 query {
   getMenuItems(categoryName: "Appetizers") {
     name
     price
   }
 }
-# Expected Result: Returns menu items for the specified category (e.g., "Appetizers").
+### Expected Result: Returns menu items for the specified category (e.g., "Appetizers").
 
-# Invalid Category Handling
+### Invalid Category Handling
 query {
   getMenuItems(categoryName: "NonExistentCategory") {
     name
     price
   }
 }
-# Expected Result: Returns an empty array.
+### Expected Result: Returns an empty array.
 
 
 
